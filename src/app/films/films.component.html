@@ -2,15 +2,6 @@
 
 <img src="https://media2.giphy.com/media/iGYCjZpTiJb6brnMtt/giphy.gif" alt="" srcset="">
 
-<div class="container">
-    <div *ngFor="let elem of films, index as i">
-        <div (click)="clickHandler(i)" class="film">
-            <span [class.selected] = "elem.render == true" class="badge">{{elem.id}}</span>{{elem.title}}
-        </div>
-    </div>
-</div>
+<app-film-list [filmArr] = "films"></app-film-list>
 
-
-<app-film-list></app-film-list>
-
-<app-film-detail [filmArr] = "films"></app-film-detail>
+<app-film-detail ></app-film-detail>

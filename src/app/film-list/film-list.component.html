@@ -1,5 +1,5 @@
 <div class="container">
-    <div *ngFor="let elem of films, index as i">
+    <div *ngFor="let elem of filmArr, index as i">
         <div (click)="clickHandler(i)" class="film">
             <span [class.selected] = "elem.render == true" class="badge">{{elem.id}}</span>{{elem.title}}
         </div>

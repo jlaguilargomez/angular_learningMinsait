@@ -10,20 +10,17 @@ import { FilmInterface } from 'src/interfaces';
 export class FilmsComponent implements OnInit {
 
   films: FilmInterface [];
+  num: number = 2;
 
-  constructor(private filmService: FilmService) { }
+  constructor(private filmService: FilmService) {}
 
-
-  clickHandler (e) {
-    this.films.forEach((elem) => {
-      elem.render = false;
-    });
-
-    this.films[e].render = true;
+  updateNum(newNumber: number): void {
+    this.num = newNumber
   };
 
   ngOnInit() {
-    this.filmService.getFilms().subscribe((films: FilmInterface[]) => this.films = films);
+    this.filmService.getFilms()
+    .subscribe((films: FilmInterface[]) => this.films = films);
   }
 
 }

@@ -8,11 +8,19 @@ import { FilmsComponent } from '../films/films.component';
 })
 export class FilmDetailComponent implements OnInit {
 
-  @Input() filmArr:any;
-  
+  // @Input() filmArr:number;
+  filmArr = [{
+    id: 1,
+    render: true,
+    score: 9.2,
+    title: "The Shawshank Redemption",
+    year: 1994,
+  }]
+
   constructor() { }
 
   ngOnInit() {
+    console.log(this.filmArr);
     
   }
 
