@@ -9,7 +9,7 @@ export class FilmService {
   constructor(private http: HttpClient) {}
 
   getFilms() {
-    return this.http.get('https://api.myjson.com/bins/v1p7u')
+    return this.http.get('https://api.myjson.com/bins/v1p7u');
   };
   
 }

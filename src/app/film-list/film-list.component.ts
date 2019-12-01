@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-film-list',
@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output } from '@angular/core';
 export class FilmListComponent implements OnInit {
 
   @Input() filmArr: any[];
-  @Output() getArrChanged = new EventEmitter<boolean>();
+  @Output() filmSelected = new EventEmitter<object>();
 
   constructor() { }
 
@@ -18,12 +18,11 @@ export class FilmListComponent implements OnInit {
     });
 
     this.filmArr[e].render = true;
-    this.getArrChanged = [...this.filmArr];
-    console.log(this.filmArr);
+    console.log(this.filmArr[e])
+    this.filmSelected.emit(this.filmArr[e]);
   };
 
   ngOnInit() {
-    console.log(this.filmArr);
   }
 
 }

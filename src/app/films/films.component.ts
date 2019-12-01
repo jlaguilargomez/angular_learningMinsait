@@ -7,16 +7,25 @@ import { FilmInterface } from 'src/interfaces';
   templateUrl: './films.component.html',
   styleUrls: ['./films.component.scss']
 })
+
 export class FilmsComponent implements OnInit {
 
   films: FilmInterface [];
-  num: number = 2;
+  receivedFilm: object;
+  
+  
 
   constructor(private filmService: FilmService) {}
 
-  updateNum(newNumber: number): void {
-    this.num = newNumber
+  // updateNum(newNumber: number): void {
+  //   this.num = newNumber
+  // };
+
+
+  getFilmSelected (film: object){
+    this.receivedFilm = film;
   };
+  
 
   ngOnInit() {
     this.filmService.getFilms()

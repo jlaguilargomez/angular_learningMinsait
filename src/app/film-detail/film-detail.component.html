@@ -1,8 +1,8 @@
-<div *ngFor="let elem of filmArr" >
-    <div *ngIf="elem.render == true" class="box">
-        <p class="result">ID: {{elem.id}}</p>
-        <p class="result">Name: {{elem.title}}</p>
-        <p class="result">Year: {{elem.year}}</p>
-        <p class="result">Score: {{elem.score}}</p>
-    </div>
+
+<div *ngIf="receivedParentFilm" class="box">
+    <p class="result">ID: {{receivedParentFilm.id}}</p>
+    <p class="result">Name: {{receivedParentFilm.title}}</p>
+    <p class="result">Year: {{receivedParentFilm.year}}</p>
+    <p class="result">Score: {{receivedParentFilm.score}}</p>
 </div>
+
