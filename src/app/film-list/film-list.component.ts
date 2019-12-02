@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-film-list',
@@ -7,10 +8,12 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class FilmListComponent implements OnInit {
 
+  idUrl: string;
+
   @Input() filmArr: any[];
   @Output() filmSelected = new EventEmitter<object>();
-
-  constructor() { }
+  
+  constructor(private route: ActivatedRoute) { }
 
     clickHandler (e) {
       this.filmArr.forEach((elem) => {
@@ -18,11 +21,10 @@ export class FilmListComponent implements OnInit {
     });
 
     this.filmArr[e].render = true;
-    console.log(this.filmArr[e])
     this.filmSelected.emit(this.filmArr[e]);
   };
+  
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }

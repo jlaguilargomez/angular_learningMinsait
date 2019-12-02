@@ -1,0 +1,19 @@
+.form {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    background-color: rgb(182, 243, 235);
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px gray;
+    margin-top: 50px;
+
+    &__input {
+        display: flex;
+        padding: 10px;
+
+        &__label {
+            width: 20%;
+            padding-right: 10px;
+        }
+    }
+}

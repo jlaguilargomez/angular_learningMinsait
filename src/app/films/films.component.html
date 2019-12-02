@@ -4,7 +4,9 @@
 
 <img src="https://media2.giphy.com/media/iGYCjZpTiJb6brnMtt/giphy.gif" alt="rambo" srcset="">
 
-<app-film-list (filmSelected) = "getFilmSelected($event)" [filmArr] = "films"></app-film-list>
+<app-film-list *ngIf="filmUrl==undefined" (filmSelected) = "getFilmSelected($event)" [filmArr] = "films"></app-film-list>
 
 <app-film-detail [receivedParentFilm] = "receivedFilm"></app-film-detail>
+
+
 

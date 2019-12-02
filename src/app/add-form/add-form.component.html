@@ -1,0 +1,25 @@
+<form class="form" [formGroup]="filmForm" (ngSubmit)="onSubmit()" action="#">
+    <div class="form__input">
+        <label class="form__input__label" for="input-title">Title</label>
+        <input type="text" formControlName="title" name="input-title" id="">
+    </div>
+
+    <div class="form__input">
+        <label class="form__input__label" for="input-year">Year</label>
+        <input type="number" formControlName="year" name="input-year" id="">
+    </div>
+    
+    <div class="form__input">
+        <label class="form__input__label" for="input-score">Score</label>
+        <input type="number" formControlName="score" name="input-score" id="">
+    </div>
+
+    <div class="form__input">
+        <label class="form__input__label" for="input-checkbox">Visible</label>
+        <input type="checkbox" formControlName="visible" name="input-checkbox" id="">
+    </div>
+
+    <div class="form__input--btn">
+        <input type="submit" value="Validate">
+    </div>
+</form>
