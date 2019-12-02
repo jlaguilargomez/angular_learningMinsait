@@ -1,7 +1,10 @@
-<h2>Películas</h2>
+<h2>Las mejores películas de la historia</h2>
 
-<img src="https://media2.giphy.com/media/iGYCjZpTiJb6brnMtt/giphy.gif" alt="" srcset="">
+<app-film-list *ngIf="receivedFilm">{{receivedFilm.id}}</app-film-list>
 
-<app-film-list [filmArr] = "films"></app-film-list>
+<img src="https://media2.giphy.com/media/iGYCjZpTiJb6brnMtt/giphy.gif" alt="rambo" srcset="">
 
-<app-film-detail ></app-film-detail>
+<app-film-list (filmSelected) = "getFilmSelected($event)" [filmArr] = "films"></app-film-list>
+
+<app-film-detail [receivedParentFilm] = "receivedFilm"></app-film-detail>
+
