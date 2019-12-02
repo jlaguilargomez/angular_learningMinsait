@@ -8,7 +8,6 @@ import { Component, OnInit, Input, Output } from '@angular/core';
 export class FilmListComponent implements OnInit {
 
   @Input() filmArr: any[];
-  @Output() getArrChanged = new EventEmitter<boolean>();
 
   constructor() { }
 
@@ -18,7 +17,6 @@ export class FilmListComponent implements OnInit {
     });
 
     this.filmArr[e].render = true;
-    this.getArrChanged = [...this.filmArr];
     console.log(this.filmArr);
   };
 
