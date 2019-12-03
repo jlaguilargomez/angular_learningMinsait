@@ -32,9 +32,6 @@ export class FilmsComponent implements OnInit {
         this.filmUrl = this.films[idUrl-1];
         this.receivedFilm = this.filmUrl;
       });
-    });
-
-    
-  }
-
-}
+    });   
+  };
+};

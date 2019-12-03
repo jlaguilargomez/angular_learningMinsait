@@ -11,5 +11,13 @@ export class FilmService {
   getFilms() {
     return this.http.get('https://api.myjson.com/bins/v1p7u');
   };
+
+  renderSomethig () {
+    console.log('Susan');    
+  }
+
+  addFilm () {
+
+  }
   
 }

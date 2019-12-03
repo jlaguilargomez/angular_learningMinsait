@@ -20,6 +20,6 @@
     </div>
 
     <div class="form__input--btn">
-        <input type="submit" value="Validate">
+        <input type="submit" value="Validate" [disabled]="!filmForm.valid">
     </div>
 </form>
